@@ -1,11 +1,9 @@
 ﻿namespace Figures
 {
-    public class Figure
+    public class Figure:IFigures
     {
         private IFigures figure;
         public double Area => figure.Area;
-
-        public Figure() { }
         public Figure(IFigures f)
         {
             figure = f;
