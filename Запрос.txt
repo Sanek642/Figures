@@ -1,0 +1,9 @@
+Таблица products: id_pr, name
+Таблица categories: id_ct, name
+
+Связь многие ко многим поэтому промежуточная таблица:
+prod_categ: id_pc, id_pr, id_ct
+
+SELECT products.name as "Имя продукта", categories.name as "Имя категории"
+FROM products LEFT JOIN prod_categ using(id_pr)
+LEFT JOIN categories using(id_ct)
